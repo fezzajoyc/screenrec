@@ -10,74 +10,29 @@ type Faq = { q: string; a: string };
 
 const GLOBAL: Partial<Record<Locale, Faq[]>> = {
   en: [
-    {
-      q: "Is this tool free to use?",
-      a: "Yes, completely free — no signup, no subscription, no daily limits, and no watermarks on the output.",
-    },
-    {
-      q: "Does my data leave my device?",
-      a: "No. The tool runs entirely in your browser with JavaScript. Nothing you type or upload is sent to a server, so it even works offline once the page has loaded.",
-    },
-    {
-      q: "Which browsers does it work in?",
-      a: "Any modern browser — Chrome, Firefox, Safari and Edge on desktop and mobile. No plugins or extensions are needed.",
-    },
+    { q: "Are my files uploaded to a server?", a: "No. ScreenRec handles screen and webcam recording entirely inside your browser — your files are read from disk into memory, processed, and offered back as a download. Nothing is transmitted." },
+    { q: "Is there a file size or time limit?", a: "The practical limit is your device's memory and battery. ScreenRec has no artificial caps and no queue: processing starts the moment you drop the file." },
+    { q: "Why is there no account system?", a: "ScreenRec works without one. screen and webcam recording processing is local, so there is nothing to sign into and nothing to store about you." },
   ],
   zh: [
-    {
-      q: "这个工具免费吗?",
-      a: "完全免费 — 无需注册、没有订阅、无每日限额,输出不带水印。",
-    },
-    {
-      q: "我的数据会传到服务器吗?",
-      a: "不会。工具完全在浏览器里用 JavaScript 运行,输入的文件和内容不会发送到任何服务器;页面加载后断网也能用。",
-    },
-    {
-      q: "支持哪些浏览器?",
-      a: "所有现代浏览器 — Chrome、Firefox、Safari、Edge,桌面和移动端通用,无需安装插件。",
-    },
+    { q: "文件会被上传到服务器吗?", a: "不会。ScreenRec的屏幕与摄像头录制处理完全在浏览器内 — 文件从磁盘读入内存、处理、然后供你下载,全程不传输。" },
+    { q: "有文件大小或时长限制吗?", a: "实际上限是你设备的内存和电量。ScreenRec没有人造上限也没有排队:文件一拖进来就开始处理。" },
+    { q: "为什么没有账号系统?", a: "ScreenRec不需要。屏幕与摄像头录制处理在本地完成,没有可登录的东西,也没有关于你的任何存储。" },
   ],
   ja: [
-    {
-      q: "このツールは無料ですか?",
-      a: "完全無料です。登録・課金・回数制限はなく、出力にウォーターマークも入りません。",
-    },
-    {
-      q: "入力したデータは外部に送信されますか?",
-      a: "送信されません。すべてブラウザ内の JavaScript で処理されるため、入力・ファイルはサーバーに送られず、読み込み後はオフラインでも動作します。",
-    },
-    {
-      q: "対応ブラウザは?",
-      a: "Chrome / Firefox / Safari / Edge の最新版(デスクトップ・モバイル共通)。プラグインや拡張機能は不要です。",
-    },
+    { q: "ファイルはサーバーにアップロードされますか?", a: "されません。ScreenRecのscreen and webcam recording処理は完全にブラウザ内で完結し、ファイルはディスクからメモリへ読み込まれ、処理後にダウンロードとして返るだけです。" },
+    { q: "ファイルサイズや時間の制限は?", a: "実質的な上限は端末のメモリとバッテリーです。ScreenRecに人為的な制限や待ち行列はなく、ファイルをドロップした瞬間に処理が始まります。" },
+    { q: "アカウントシステムがないのはなぜ?", a: "不要だからです。screen and webcam recording処理はローカルで完結するため、ログインする対象も、ユーザーについて保存するものもありません。" },
   ],
   es: [
-    {
-      q: "¿Esta herramienta es gratis?",
-      a: "Sí, totalmente gratis: sin registro, sin suscripción, sin límites diarios y sin marcas de agua.",
-    },
-    {
-      q: "¿Mis datos salen de mi dispositivo?",
-      a: "No. Todo se procesa con JavaScript en tu navegador; nada se envía a un servidor. Incluso funciona sin conexión una vez cargada la página.",
-    },
-    {
-      q: "¿En qué navegadores funciona?",
-      a: "Cualquier navegador moderno: Chrome, Firefox, Safari y Edge, en escritorio y móvil. Sin plugins ni extensiones.",
-    },
+    { q: "¿Mis archivos se suben a un servidor?", a: "No. ScreenRec procesa screen and webcam recording por completo dentro de tu navegador — los archivos se leen a memoria, se procesan y se te ofrecen como descarga. No se transmite nada." },
+    { q: "¿Hay límite de tamaño o duración?", a: "El límite práctico es la memoria y batería de tu equipo. ScreenRec no tiene topes artificiales ni colas: el procesado empieza al soltar el archivo." },
+    { q: "¿Por qué no hay cuentas?", a: "ScreenRec no las necesita. El procesado de screen and webcam recording es local, así que no hay nada que iniciar sesión ni nada que almacenar sobre ti." },
   ],
   pt: [
-    {
-      q: "Esta ferramenta é gratuita?",
-      a: "Sim, totalmente gratuita — sem cadastro, sem assinatura, sem limites diários e sem marcas d'água.",
-    },
-    {
-      q: "Meus dados saem do dispositivo?",
-      a: "Não. A ferramenta roda inteiramente no seu navegador com JavaScript; nada é enviado a servidores e funciona até offline depois de carregada.",
-    },
-    {
-      q: "Quais navegadores são suportados?",
-      a: "Qualquer navegador moderno — Chrome, Firefox, Safari e Edge, no desktop e no celular. Nenhum plugin necessário.",
-    },
+    { q: "Meus arquivos são enviados para um servidor?", a: "Não. O ScreenRec processa screen and webcam recording inteiramente no navegador — os arquivos são lidos na memória, processados e devolvidos como download. Nada é transmitido." },
+    { q: "Existe limite de tamanho ou duração?", a: "O limite prático é a memória e a bateria do seu aparelho. O ScreenRec não tem tetos artificiais nem filas: o processamento começa ao soltar o arquivo." },
+    { q: "Por que não há sistema de contas?", a: "O ScreenRec não precisa. O processamento de screen and webcam recording é local, então não há login nem nada armazenado sobre você." },
   ],
 };
 
