@@ -108,11 +108,18 @@ export function Prose({ paragraphs }: { paragraphs: string[] }) {
 
 export function Breadcrumb({
   items,
+  locale = "en",
 }: {
   items: { label: string; href?: string }[];
+  locale?: string;
 }) {
+  const BREADCRUMB: Partial<Record<string, string>> = {
+    en: "Breadcrumb", zh: "面包屑", ja: "パンくずリスト", es: "Miga de pan", pt: "Trilha de navegação",
+    fr: "Fil d'Ariane", de: "Brotkrumen", ru: "Навигационная цепочка", it: "Percorso", tr: "Sayfa yolu",
+    ko: "탐색 경로", ar: "مسار التنقل", hi: "ब्रेडक्रम", id: "Breadcrumb", vi: "Đường dẫn",
+  };
   return (
-    <nav aria-label="Breadcrumb" className="mb-6 text-[13px] text-[var(--color-sub)]">
+    <nav aria-label={BREADCRUMB[locale] ?? "Breadcrumb"} className="mb-6 text-[13px] text-[var(--color-sub)]">
       <ol className="flex flex-wrap items-center gap-1.5">
         {items.map((it, i) => (
           <li key={i} className="flex items-center gap-1.5">

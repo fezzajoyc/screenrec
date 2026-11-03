@@ -139,6 +139,7 @@ export default async function ToolPage({
       />
 
       <Breadcrumb
+        locale={locale}
         items={[
           { label: SITE.name, href: `/${locale}` },
           { label: categoryName, href: `/${locale}/categories/${tool.category}` },
