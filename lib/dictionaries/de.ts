@@ -19,6 +19,10 @@ const de = {
     heroSub:
       "Werkzeuge für Bildschirm-, Webcam- und GIF-Aufnahmen, die komplett in Ihrem Browser laufen — gratis, ohne Anmeldung, ohne Wasserzeichen. Die Aufnahme wird auf Ihrem Gerät kodiert und erst beim Klick auf Download gespeichert.",
     browseAll: "Alle Tools ansehen",
+    pinned: "Angepinnt",
+    pin: "Oben anpinnen",
+    unpin: "Nicht mehr anpinnen",
+    popular: "Gerade beliebt",
     categoriesTitle: "Kategorien",
     featuredTitle: "Beliebte Tools",
     trustLocal: "Dateien bleiben auf Ihrem Gerät",
@@ -77,6 +81,8 @@ const de = {
     howTo: "So verwenden Sie es",
     faq: "Häufige Fragen",
     related: "Verwandte Tools",
+    nextStep: "Nächste Schritte",
+    copyLink: "Link kopieren",
     privacyNote:
       "Dieses Tool läuft vollständig in Ihrem Browser. Ihre Daten verlassen Ihr Gerät nie — sie werden auf keinen Server hochgeladen.",
     inCategory: "Mehr in {category}",

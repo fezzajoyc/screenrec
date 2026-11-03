@@ -23,6 +23,9 @@ export function ToolsDirectory({
     empty: string;
     clearSearch?: string;
     backHome?: string;
+    pinned?: string;
+    pin?: string;
+    unpin?: string;
     categoryNames: Record<string, string>;
     hrefLang: string;
   };

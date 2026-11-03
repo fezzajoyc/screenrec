@@ -61,6 +61,9 @@ export default async function ToolsDirectoryPage({
             Object.entries(t.categories).map(([k, v]) => [k, v.name]),
           ),
           hrefLang: locale,
+          pinned: t.home.pinned,
+          pin: t.home.pin,
+          unpin: t.home.unpin,
         }}
       />
     </Container>

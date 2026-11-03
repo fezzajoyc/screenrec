@@ -10,6 +10,8 @@ import { Breadcrumb, Container, Prose, SectionHead, ToolCard, Pill } from "@/com
 import { Icon } from "@/components/icons";
 import { JsonLd } from "@/components/jsonld";
 import { trackRecent, ToolEmbedBox, EmbedGate, RecentTracker } from "@/components/tool-extras";
+import { PinButton } from "@/components/pin-button";
+import { NextToolsBar } from "@/components/next-tools-bar";
 
 export function generateStaticParams() {
   return LOCALES.flatMap((lang) => ALL_TOOLS.map((tool) => ({ lang, slug: tool.slug })));
@@ -151,10 +153,15 @@ export default async function ToolPage({
         <span className="hidden rounded-2xl bg-[var(--color-surface)] p-3.5 text-[var(--color-ink)] sm:inline-flex">
           <Icon name={tool.icon} size={28} />
         </span>
-        <div>
+        <div className="min-w-0 flex-1">
           <h1 className="h1">{c.h1 ?? c.name}</h1>
           <p className="mt-2 max-w-2xl text-[16px] leading-6 text-[var(--color-sub)]">{c.tagline}</p>
         </div>
+        {!embed && (
+          <div className="flex-none pt-1">
+            <PinButton slug={tool.slug} labels={{ pin: t.home.pin, unpin: t.home.unpin }} />
+          </div>
+        )}
       </div>
 
       <EmbedGate active={embed} />
