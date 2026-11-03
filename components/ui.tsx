@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { Icon } from "./icons";
+import { tileStyle } from "@/lib/tool-colors";
 import { dict, type Dictionary } from "@/lib/i18n";
 import type { Locale } from "@/lib/site";
 import type { ToolDef } from "@/tools/_lib/types";
@@ -79,7 +80,8 @@ export function ToolCard({
       href={`/${locale}/tools/${tool.slug}`}
       className="group block rounded-2xl border hairline bg-[var(--color-card)] p-5 transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,0,0,0.07)]"
     >
-      <div className="mb-3 inline-flex rounded-xl bg-[var(--color-surface)] p-2.5 text-[var(--color-ink)]">
+      <div className="mb-3 inline-flex rounded-xl p-2.5 transition-transform group-hover:scale-105"
+        style={tileStyle(tool.slug, tool.category)}>
         <Icon name={tool.icon} size={20} />
       </div>
       <h3 className="font-semibold leading-tight">{name}</h3>
