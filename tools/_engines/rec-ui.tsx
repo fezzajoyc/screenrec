@@ -105,7 +105,7 @@ export function ActionButton({
       ? "bg-[#b3261e] text-white hover:opacity-90"
       : tone === "ghost"
         ? "hairline text-[var(--color-ink)] hover:bg-[var(--color-surface)]"
-        : "bg-[var(--color-ink)] text-white hover:opacity-90";
+        : "bg-[var(--color-ink)] text-white dark:bg-white dark:text-[#1d1d1f] hover:opacity-90";
   return (
     <button
       type="button"
